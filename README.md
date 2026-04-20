@@ -33,11 +33,10 @@ Bayesian partial pooling is the right tool for that question: it borrows strengt
 across subjects, handles a 17F/30M imbalance honestly, and produces posterior
 credible intervals rather than yes/no hypothesis tests.
 
-This repository is the first phase of a longer-running portfolio project on
-algorithmic fairness in wearable health technology. A planned second phase is an
-interactive tool that takes a user's demographics as input and returns the posterior
-distribution of expected cadence bias for their profile. The academic writeup and
-the portfolio extension are two distinct artifacts with overlapping content.
+I chose this as a portfolio project. I'm interested in data science for health
+biometrics — movement data in particular — and wanted hands-on experience with
+a dataset that pairs wearable-grade IMU signals with lab-grade optical
+motion-capture and force-plate ground truth.
 
 ## What's in this repo
 
@@ -54,8 +53,8 @@ the portfolio extension are two distinct artifacts with overlapping content.
   description (`dataset_info.md`), and a committed frozen reference
   (`reference/modeling_df.parquet`) so the notebooks run without re-downloading
   the raw data
-- `report/` — final writeup (`wearable_calibration_bayes_report.pdf` and
-  `.tex`), supporting appendix CSVs, and `references.bib`
+- `report/` — final writeup (`wearable_calibration_bayes_report.pdf`) and
+  supporting appendix CSVs
 - `tests/` — unit tests for the build pipeline
 - `config.yaml`, `environment.yaml` — pipeline configuration and the pinned conda
   environment spec
@@ -149,8 +148,8 @@ Full methods, diagnostics, model specifications, and limitations are in
 
 ## References
 
-Works cited above; full bibliography in
-[`report/references.bib`](report/references.bib).
+Works cited above; full bibliography in the
+[report PDF](report/wearable_calibration_bayes_report.pdf).
 
 - Criado Perez, C. (2019). *Invisible Women: Data Bias in a World Designed for Men.*
   Abrams Press.
