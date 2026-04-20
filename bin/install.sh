@@ -38,6 +38,11 @@ Env provides:
   $PIP_VERSION
 
 Environment built successfully.
+EOF
+
+if [[ "${WEARABLE_SETUP_CHAIN:-}" != "1" ]]; then
+    cat <<EOF
 >>> Run this next: conda activate $ENV_NAME
 Then continue with:   bin/download_data.sh  (or)  bin/setup.sh
 EOF
+fi

@@ -90,9 +90,11 @@ bin/download_data.sh                        # fetch ~23 GB from Zenodo, idempote
 bin/build.sh                                # write data/processed/modeling_df.parquet
 ```
 
-`bin/setup.sh` chains the download and build steps into a single command once the
-env is active. Every script captures stdout and stderr to
-`logs/<script>.{stdout,stderr}.log` on every run.
+`bin/setup.sh` runs install → download → build end-to-end from a fresh clone and
+does not require the env to be active — it sources conda's shell hook and
+activates the env in-process before invoking the post-install steps. Every
+script captures stdout and stderr to `logs/<script>.{stdout,stderr}.log` on
+every run.
 
 **Download time.** The Kuopio dataset is split into three Zenodo archives (~23 GB
 combined) that download in parallel — three jobs by default; override with
