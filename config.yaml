@@ -1,0 +1,53 @@
+# Fixed-threshold peak-detection parameters for the naive step-count IMU
+# algorithm that Models 1-4 audit. Consumed by `src/imu.py` detect_steps().
+#
+# Signal convention: magnitude of freeAcceleration in g units
+# (|a| / 9.81). Magnitude is orientation-invariant — what a real
+# consumer wearable sees when it does not know the sensor's body-frame
+# alignment. g units keep the prominence threshold human-readable.
+#
+# These are fixed (not per-subject) by design — the audit question is
+# how well a single generic threshold works across demographics. See
+# DECISIONS.md 2026-04-18 peak detection params for calibration
+# provenance and audit-framing rationale.
+detector_params:
+  # Minimum spacing between detected peaks, in samples at 100.1 Hz.
+  # First-principles bound: 200 spm cadence ceiling → 0.3 s per step →
+  # ~30 samples at 100.1 Hz. Walking cadence above 200 spm exceeds
+  # competitive-running cadence and is biomechanically implausible for
+  # overground walking. This is a safety gate against double-counting
+  # within a single stance phase, not a tuning knob.
+  min_distance_samples: 30
+
+  # Minimum peak prominence in g for acceptance. Calibrated against
+  # force-plate ground truth on subject 01 trial l_comf_01 (single-trial
+  # calibration, single generic threshold). Prominence rather than
+  # absolute height: robust to gravity-subtraction residuals and slow
+  # postural drift, standard in modern step-counting literature.
+  prominence_g: 0.3
+
+# IMU sensor serial → body location mapping for the Kuopio Gait Dataset.
+# Source: Lavikainen et al. 2024, Data in Brief (Zenodo DOI 10.5281/zenodo.10559504);
+# mirrored in data/dataset_info.md.
+#
+# The 7 Xsens MTw Awinda sensors were placed in the same body locations across
+# all sessions, with one documented exception: subjects 01 and 02 had a
+# different physical device on the left foot (B42D4E) before it was swapped
+# for B42D51 starting with subject 03.
+#
+# Consumed by the IMU loader to resolve body location → serial per subject.
+sensor_map:
+  default:
+    pelvis:      B42DA3
+    right_femur: B42DA2
+    left_femur:  B42D4D
+    right_tibia: B42DAE
+    left_tibia:  B42D53
+    right_foot:  B42D48
+    left_foot:   B42D51
+
+  subject_overrides:
+    "01":
+      left_foot: B42D4E
+    "02":
+      left_foot: B42D4E

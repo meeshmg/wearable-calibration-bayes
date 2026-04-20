@@ -1,0 +1,53 @@
+Wearable Calibration Bayes
+Copyright (c) 2026 Michelle Griffith
+
+This work is licensed under the Creative Commons Attribution-NonCommercial 4.0
+International License (CC BY-NC 4.0).
+
+To view a copy of the full legal code, visit:
+  https://creativecommons.org/licenses/by-nc/4.0/legalcode
+To view a human-readable summary, visit:
+  https://creativecommons.org/licenses/by-nc/4.0/
+
+SPDX-License-Identifier: CC-BY-NC-4.0
+
+--------------------------------------------------------------------------------
+
+Summary (non-binding; see the full legal code at the URL above for the
+authoritative terms):
+
+You are free to:
+
+  * Share  -- copy and redistribute the material in any medium or format.
+  * Adapt  -- remix, transform, and build upon the material.
+
+Under the following terms:
+
+  * Attribution    -- You must give appropriate credit, provide a link to the
+                      license, and indicate if changes were made. You may do so
+                      in any reasonable manner, but not in any way that
+                      suggests the licensor endorses you or your use.
+  * NonCommercial  -- You may not use the material for commercial purposes.
+  * No additional restrictions -- You may not apply legal terms or
+                      technological measures that legally restrict others from
+                      doing anything the license permits.
+
+Notices:
+
+  * You do not have to comply with the license for elements of the material
+    in the public domain or where your use is permitted by an applicable
+    exception or limitation.
+  * No warranties are given. The license may not give you all of the
+    permissions necessary for your intended use. For example, other rights
+    such as publicity, privacy, or moral rights may limit how you use the
+    material.
+
+--------------------------------------------------------------------------------
+
+Third-party data notice.
+
+The Kuopio Gait Dataset (Lavikainen et al. 2024,
+doi:10.5281/zenodo.10559504) is licensed separately under CC BY 4.0 by its
+original authors. This repository does not redistribute the raw dataset;
+`bin/download_data.sh` fetches it directly from Zenodo on setup. Users must
+comply with the dataset's own license in addition to the terms above.

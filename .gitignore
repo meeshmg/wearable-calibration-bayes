@@ -1,0 +1,17 @@
+# Data artifacts users generate locally
+data/kuopio/
+data/processed/
+data/scout/
+*.nc
+
+# Logs
+logs/
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
