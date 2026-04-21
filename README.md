@@ -33,10 +33,11 @@ Bayesian partial pooling is the right tool for that question: it borrows strengt
 across subjects, handles a 17F/30M imbalance honestly, and produces posterior
 credible intervals rather than yes/no hypothesis tests.
 
-I chose this as a portfolio project. I'm interested in data science for health
-biometrics — movement data in particular — and wanted hands-on experience with
-a dataset that pairs wearable-grade IMU signals with lab-grade optical
-motion-capture and force-plate ground truth.
+This repository is the first phase of a longer-running portfolio project on
+algorithmic fairness in wearable health technology. A planned second phase is an
+interactive tool that takes a user's demographics as input and returns the posterior
+distribution of expected cadence bias for their profile. The academic writeup and
+the portfolio extension are two distinct artifacts with overlapping content.
 
 ## What's in this repo
 
@@ -53,8 +54,8 @@ motion-capture and force-plate ground truth.
   description (`dataset_info.md`), and a committed frozen reference
   (`reference/modeling_df.parquet`) so the notebooks run without re-downloading
   the raw data
-- `report/` — final writeup (`wearable_calibration_bayes_report.pdf`) and
-  supporting appendix CSVs
+- `report/` — final writeup (`wearable_calibration_bayes_report.pdf` and
+  `.tex`), supporting appendix CSVs, and `references.bib`
 - `tests/` — unit tests for the build pipeline
 - `config.yaml`, `environment.yaml` — pipeline configuration and the pinned conda
   environment spec
@@ -150,8 +151,8 @@ Full methods, diagnostics, model specifications, and limitations are in
 
 ## References
 
-Works cited above; full bibliography in the
-[report PDF](report/wearable_calibration_bayes_report.pdf).
+Works cited above; full bibliography in
+[`report/references.bib`](report/references.bib).
 
 - Criado Perez, C. (2019). *Invisible Women: Data Bias in a World Designed for Men.*
   Abrams Press.
@@ -174,9 +175,9 @@ Works cited above; full bibliography in the
   accelerometers. *npj Digital Medicine*, 6, 29.
   [doi:10.1038/s41746-022-00745-z](https://doi.org/10.1038/s41746-022-00745-z)
 - Lavikainen, J., Vartiainen, P., Stenroth, L., Karjalainen, P. A., Korhonen, R. K.,
-  Liukkonen, M. K., & Mononen, M. E. (2024). Kuopio gait dataset: motion capture,
-  inertial measurement and video-based sagittal-plane keypoint data from walking
-  trials. *Data in Brief*, 56, 110841.
+  Liukkonen, M. K., & Mononen, M. E. (2024). Gait data from 51 healthy participants
+  with motion capture, inertial measurement units, and computer vision. *Data in
+  Brief*, 56, 110841.
   [doi:10.1016/j.dib.2024.110841](https://doi.org/10.1016/j.dib.2024.110841)
 
 **Software.** Built on PyMC [Abril-Pla et al., 2023] and ArviZ [Martin et al., 2026];

@@ -230,7 +230,7 @@ this repository's `LICENSE` file.
 Companion data descriptor:
 
 > Lavikainen, J., Vartiainen, P., Stenroth, L., Karjalainen, P. A.,
-> Korhonen, R. K., Liukkonen, M. K., & Mononen, M. E. (2024). Kuopio gait
-> dataset: motion capture, inertial measurement and video-based sagittal-plane
-> keypoint data from walking trials. *Data in Brief*, 56, 110841.
+> Korhonen, R. K., Liukkonen, M. K., & Mononen, M. E. (2024). Gait data
+> from 51 healthy participants with motion capture, inertial measurement
+> units, and computer vision. *Data in Brief*, 56, 110841.
 > <https://doi.org/10.1016/j.dib.2024.110841>
